@@ -1,0 +1,219 @@
+/**
+ * Project Central
+ * projectsstyles.css - Project Page Stylesheet
+ * Description: Stylesheet made specifically for the project page containing the styles for the project bars and filter controls
+ * Author: Daniel Barajas
+ * Last update: 1/7/2022
+ */
+
+main {
+	padding: 4em 7.5em;
+	color: #555;
+}
+
+h1 {
+	color: #333;
+}
+
+table {
+	width: 100%;
+}
+
+table * {
+	box-sizing: border-box;
+}
+
+thead > tr {
+	display: flex;
+	color: #888;
+	width: 100%;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+
+.project {
+	display: flex;
+	align-items: center;
+	line-height: 3.5em;
+	width: 100%;
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+	border-left: 1px solid #AAA;
+	border-right: 1px solid #AAA;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.project:hover {
+    background-color: #DADADA;
+}
+
+.project:hover > .pExpand > .pExAnim {
+	width: 100%;
+}
+
+#projectList {
+	display: block;
+	width: 100%;
+}
+
+/* Project List Table Data */
+
+.pName, .pCategory, .pVersion, .pCreated, .pUpdated, .pExpand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 2px solid;
+	border-image: linear-gradient(rgba(204, 204, 204, 0),rgba(204, 204, 204, 1), rgba(204, 204, 204, 0)) 1 100%;
+    overflow: hidden;
+	cursor: pointer;
+	user-select: none;
+}
+
+.pName {
+	font-weight: bold;
+	padding-left: 1em;
+	width: 35%;
+	justify-content: flex-start;
+}
+
+.pCategory {
+	width: 15%;
+}
+
+.pVersion {
+	width: 10%;
+}
+
+.pCreated {
+    width: 17.5%;
+}
+
+.pUpdated {
+	width: 17.5%;
+}
+
+.pExpand {
+    width: 5%;
+	height: 100%;
+    transition: 1s;
+	border: none;
+}
+
+th.pExpand {
+	cursor: initial;
+}
+
+.pExAnim {
+    background-color: #4A4;
+    width: 0%;
+    height: 100%;
+    transition: 0.5s;
+    color: #FFF;
+    z-index: 1;
+}
+
+.pExIcon {
+    position: absolute;
+    color: #FFF;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.collContent {
+	display: flex;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	background-color: #F4F4F4;
+}
+
+tr.collContent {
+	border-left: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	padding: 0 2em;
+	width: 95%;
+}
+
+.pDescText {
+	width: 50%;
+	margin-right: 5.5%;
+}
+
+.pDescText > h4 {
+	margin: 0;
+}
+
+.pDescText > p {
+	margin: 0.5em 0 0 0;
+	font-size: 14px;
+}
+
+.pDescTags {
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	width: 50%;
+}
+
+.pDescTags > div > h5 {
+	margin: 0;
+}
+
+.pDescTags > div > p {
+	margin: 0;
+	font-size: 13.5px;
+}
+
+.pDescLang {
+	height: 50%;
+}
+
+.pDescAcc {
+	height: 50%;
+}
+
+/* Media Queries for Screen Size Variations */
+
+@media screen and (max-width: 900px), print {
+	main {
+	    padding: 4em 2em;
+	}
+}
+
+/* Filter Section */
+
+#filter {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#filterControls {
+    width: 100%;
+    display: flex;
+	justify-content: space-around;
+}
+
+#filter:after {
+	content: '\002B';
+}
+
+#filter.expanded:after {
+	content: "\2212";
+}
+
+/* Sort Icons */
+
+.sortDesc:after {
+	content: '\2191';
+	padding-left: 5px;
+	font-family: monospace;
+	font-size: 1.5em;
+}
+
+.sortAsc:after {
+	content: '\2193';
+	padding-left: 5px;
+	font-family: monospace;
+	font-size: 1.5em;
+}

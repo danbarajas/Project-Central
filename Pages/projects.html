@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+Project Central: projects.html
+Daniel Barajas
+Last edit: 1/7/2022
+-->
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Pages/projectsstyles.css">
+        <title>Projects</title>
+    </head>
+    <body id="top">
+        <nav></nav>
+          
+        <main>
+			<h1>Projects</h1>
+			<div id="sortControls">
+			     <label for="search">Search </label>
+                    <input type="text" id="search" name="search" placeholder="Project name..." oninput="searchUpdate();" onfocus="select();">
+			     <br><br>
+			     <div class="collapsible" id="filter">Filter </div>
+			     <div class="collContent" id="filterControls">
+			          <div id="filterCategory">
+     			          <u>Category</u><br>
+     			          <input type="checkbox" id="cbWebDesign" name="category" value="Web Design" onclick="filterCategory();">
+                              <label for="cbWebDesign">Web Design</label><br>
+                              <input type="checkbox" id="cbJournalism" name="category" value="Journalism" onclick="filterCategory();">
+                              <label for="cbJournalism">Journalism</label>
+                         </div>
+                         
+                         <div id="filterAccess">
+     			          <u>Access</u><br>
+     			          <input type="checkbox" id="cbLink" name="access" value="Link" onclick="filterAccess();">
+                              <label for="cbLink">Link</label><br>
+                              <input type="checkbox" id="cbFile" name="access" value="File" onclick="filterAccess();">
+                              <label for="cbFile">File</label>
+                         </div>
+		          </div>
+			</div>
+			<br>
+			<div id="listLabels">
+				<div class="pName">Name</div>
+				<div class="pCategory">Category</div>
+				<div class="pAccess">Access</div>
+				<div class="pVersion">Version</div>
+				<div class="pActivity">Activity</div>
+				<div class="pExpand"></div>
+			</div>
+			
+			<div id="projectList">
+				<div id="projectCentral" class="projectBar">
+					<div class="pName"></div>
+					<div class="pCategory"></div>
+					<div class="pAccess"></div>
+					<div class="pVersion"></div>
+					<div class="pActivity"></div>
+					<div class="pExpand"><div class="pExAnim"></div><div class="pExIcon">Open</div></div>
+				</div>
+				
+				<div id="webPortal" class="projectBar">
+					<div class="pName"></div>
+					<div class="pCategory"></div>
+					<div class="pAccess"></div>
+					<div class="pVersion"></div>
+					<div class="pActivity"></div>
+					<div class="pExpand"></div>
+				</div>
+				
+				<div id="collegeCountdown" class="projectBar">
+					<div class="pName"></div>
+					<div class="pCategory"></div>
+					<div class="pAccess"></div>
+					<div class="pVersion"></div>
+					<div class="pActivity"></div>
+					<div class="pExpand"></div>
+				</div>
+			</div>
+			
+        </main>
+          
+        <footer></footer>
+        
+        <script src="../JS/script.js"></script>
+        <script src="../JS/projectvars.js"></script>
+        <script src="../JS/Pages/projectsscript.js"></script>
+    </body>
+</html>

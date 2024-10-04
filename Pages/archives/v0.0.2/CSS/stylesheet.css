@@ -1,0 +1,378 @@
+/*
+Project Central: stylesheet.css
+Daniel Barajas
+Last edit: 10/20/2021
+Version: 0.0.2
+*/
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #FAFAFA;
+	height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navigation Bar */
+nav {
+	width: 100%;
+  height: 2.5em;
+	background-color: rgba(51,51,51,.6);
+	font-size: 1.25em;
+	position: fixed;
+	top: 0;
+	box-shadow: 0 5px 10px -5px #111;
+	z-index: 10;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+nav:hover {
+	background-color: rgba(51,51,51,.8);
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+	float: right;
+}
+
+nav ul a {
+	display: block;
+	padding: 0.75em 0.5em;
+	color: #FFF;
+	font-family: 'Major Mono Display', monospace;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+nav ul a:hover {
+	background-color: rgba(17,17,17,.5);
+}
+
+nav ul a:active {
+	transition: 0.1s;
+	background-color: rgba(0,0,0,.6);
+}
+
+.current {
+    background-color: rgba(17,17,17,.5);
+}
+
+/* Logo Design */
+#logo {
+	padding: 0.333em 0.5em;
+	margin: 0;
+	display: block;
+	position: relative;
+	float: left;
+	color: #FFF;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Major Mono Display', monospace;
+	transition: 0.3s;
+}
+
+#logo:hover {
+    background-color: rgba(17,17,17,.5);
+}
+
+#logo:active {
+    transition: 0.1s;
+    background-color: rgba(0,0,0,.6);
+}
+
+.titleAnim {
+    display: inline-block;
+    width: 4.44em;
+    color: #FFF;
+    overflow: hidden;
+    font-size: 0.8333em;
+    animation: titleAnimAlt 2s 1;
+    animation-timing-function: ease-in-out;
+}
+
+.logoLetter {
+    color: #F33;
+    display: inline;
+    font-size: 1em;
+}
+
+@keyframes titleAnimAlt {
+    from {width: 0px; color: #333;}
+    to {width: 4.44em; color: #FFF;}
+}
+
+/* Intro Screen Styles*/
+.parallax {
+    background-image: url(../../images/code.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro {
+	position: relative;
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	top: 20%;
+	background-color: rgba(250,250,250,.6);
+	border-radius: 15px;
+	font-size: 3em;
+	color: #000;
+}
+
+/* Content styles */
+main {
+	padding: 4em 15em;
+}
+
+.panel {
+	margin: 6.25em auto;
+	width: 100%;
+	height: 35vw;
+	background-color: #FFF;
+	border-radius: 7px;
+}
+
+.leftDesc {
+	height: 100%;
+	width: 45%;
+	background-color: #FFF;
+	outline: 2px solid #CCC;
+	border-radius: 7px;
+	float: left;
+}
+
+.rightDesc {
+	height: 100%;
+	width: 45%;
+	background-color: #FFF;
+	outline: 2px solid #CCC;
+	border-radius: 7px;
+	float: right;
+}
+
+.descContent {
+	padding: 1% 8%;
+	height: 27.3vw;
+	width: 84%;
+	/*outline: 1px solid #CCC;*/
+	border-radius: 7px 7px 0 0;
+	overflow: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+	background-color: transparent;
+}
+
+.descContent::-webkit-scrollbar {
+	display: none;
+}
+
+.descButton {
+	width: 36.5%;
+	outline: 3px solid #4A4;
+	border-radius: 20px;
+	background-color: #4A4;
+	text-align: center;
+	margin: auto;
+	display: block;
+	position: relative;
+	top: 1.575vw;
+	font-size: 1.25vw;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.descButton a {
+	display: block;
+	color: #FFF;
+	padding: 1.25vw 0;
+	transition: 0.3s;
+}
+
+.descButton a span {
+	transition: 0.3s;
+	position: relative;
+	display: inline-block;
+}
+
+.descButton:hover {
+	background-color: transparent;
+}
+
+.descButton a:hover {
+	color: #4A4;
+}
+
+.descButton a span:after {
+  content: '\279C';
+  position: absolute;
+  opacity: 0;
+  top: -0.1em;
+  right: 0;
+}
+
+.descButton a:hover span {
+  padding-right: 1em;
+}
+
+.descButton a:hover span:after {
+  opacity: 1;
+  right: -0.3em;
+}
+
+/* Footer */
+#details {
+    background-color: #333;
+    width: 100%;
+    height: 18.75em;
+    color: #FFF;
+}
+
+#backToTop {
+    background-color: #444;
+    width: 100%;
+    height: 3em;
+    position: relative;
+    color: #FFF;
+    font-size: 0.75em;
+	transition: 0.1s;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}
+
+#copyright {
+    background-color: #111;
+    width: 100%;
+    height: 3.75em;
+    position: relative;
+    color: #FFF;
+    font-size: 0.75em;
+}
+
+/* Miscellaneous */
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Media Queries for Screen Size Variations */
+@media screen and (max-width: 1250px), print {
+	main {
+		padding: 2em 7.5em;
+	}
+	
+	.descButton {
+		font-size: 1.25vw;
+		top: 1.4vw;
+	}
+	
+	.descButton a {
+		padding: 1vw;
+	}
+}
+@media screen and (max-width: 900px), print {
+	nav {
+		height: 5em;
+	}
+	
+	nav ul {
+		margin: 0;
+		position: absolute;
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	#logo {
+		margin: 0;
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.descButton {
+		top: 2vw;
+	}
+	
+	main {
+		padding: 2em 0;
+	}
+	
+	.panel {
+		height: 43.75vw;
+		border-radius: 0;
+	}
+	
+	.descContent {
+		height: 34.125vw;
+	}
+	
+	.leftDesc {
+		border-radius: 0 7px 7px 0;
+	}
+	
+	.rightDesc {
+		border-radius: 7px 0 0 7px;
+	}
+}
+
+@media screen and (max-width: 650px), print {
+	nav {
+		height: 2.5em;
+	}
+  
+	nav ul {
+		display: none;
+	}
+  
+	#logo {
+		margin: auto 0;
+		width: 100%;
+		top: 50%;
+	}
+	
+	#logo:after {
+		content: '\2008';
+	}
+	
+	.descButton {
+		font-size: 2vw;
+		top: 2.5vw;
+	}
+	
+	.panel {
+		height: 52.5vw;
+	}
+	
+	.descContent {
+		height: 40.95vw;
+	}
+}

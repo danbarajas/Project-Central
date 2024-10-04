@@ -1,0 +1,129 @@
+/*
+Project Central: projectsstyles.css
+Daniel Barajas
+Last edit: 1/7/2022
+*/
+
+main {
+	padding: 4em 7.5em;
+	color: #555;
+}
+
+h1 {
+	color: #333;
+}
+
+#listLabels {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #888;
+	border-left: 1px solid transparent;
+}
+
+#projectList {
+	border: 1px solid #AAA;
+	width: 100%;
+}
+
+.projectBar {
+	display: flex;
+	align-items: center;
+	height: 3.5em;
+	background-color: #FFF;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	cursor: pointer;
+	transition: 0.25s;
+}
+
+.projectBar:hover {
+    background-color: #DADADA;
+}
+
+.projectBar:hover .pExpand .pExAnim {
+	width: 100%;
+}
+
+/* Project List Data */
+
+.pName, .pCategory, .pAccess, .pVersion, .pActivity, .pExpand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	border-width: 2px;
+	border-style: solid;
+	border-left: none;
+	border-top: none;
+	border-bottom: none;
+	border-image: linear-gradient(rgba(204, 204, 204, 0),rgba(204, 204, 204, 1), rgba(204, 204, 204, 0)) 1 100%;
+    overflow: hidden;
+}
+
+.pName {
+	font-weight: bold;
+	padding-left: 1em;
+	width: 35%;
+	justify-content: flex-start;
+}
+
+.pCategory {
+	width: 15%;
+}
+
+.pAccess {
+	width: 10%;
+}
+
+.pVersion {
+	width: 15%;
+}
+
+.pActivity {
+    width: 20%;
+}
+
+.pExpand {
+    width: 5%;
+    transition: 1s;
+}
+
+.pExAnim {
+    height: 100%;
+    background-color: #4A4;
+    width: 0%;
+    transition: 0.5s;
+    color: #FFF;
+    z-index: 1;
+}
+
+.pExIcon {
+    position: absolute;
+    color: #FFF;
+    z-index: 2;
+    background-color: transparent;
+}
+
+#sortControls {
+	width: 100%;
+}
+
+/* Media Queries for Screen Size Variations */
+@media screen and (max-width: 900px), print {
+	main {
+	    padding: 4em 2em;
+	}
+}
+
+#filter {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#filterControls {
+    width: 100%;
+    display: flex;
+	justify-content: space-around;
+}

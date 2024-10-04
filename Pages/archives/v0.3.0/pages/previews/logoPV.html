@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Project Central: logoPV.html - PREVIEW
+Daniel Barajas
+Last edit: 11/11/2021
+-->
+<html>
+	<head>
+	     <link rel="stylesheet" type="text/css" href="../../CSS/stylesheet.css">
+		<title>logoPV Code Preview</title>
+	</head>
+	
+	<body style="margin: 2em;">
+	     <h1>logoPV Code Preview</h1>
+	     <p><span id="copyCode">Copy to Clipboard</span> | <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic" target="_blank">W3Schools HTML Editor</a></p>
+		<xmp>
+<!-- First Project Central logo animation (infinite and alternating repeat) with arrow animation -->
+<!-- Created by Daniel Barajas for Project Central -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Beginning of CSS -->
+        <style>
+		/* Font */
+		@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap');
+
+		/* Logo box styling */
+		#logoPV {
+			padding: 0.333em 0.5em;
+			margin: 0;
+			display: inline-block;
+			position: relative;
+			color: #FFF;
+			text-align: center;
+			font-size: 1.5em;
+			font-weight: bold;
+			font-family: 'Major Mono Display', monospace;
+			transition: 0.3s;
+			background-color: rgba(85,85,85,.3);
+		}
+	   
+		/* Background darken on mouse hover */
+		#logoPV:hover {
+			background-color: rgba(17,17,17,.5);
+			cursor: pointer;
+		}
+	   
+		/* Background further darken on mouse click */
+		#logoPV:active {
+			transition: 0.1s;
+			background-color: rgba(0,0,0,.7);
+		}
+	   
+		/* Logo text styling */
+		.titlePV {
+			transition: 0.3s;
+			position: relative;
+			display: inline-block;
+		}
+	   
+		/* Display down arrow on mouse hover */
+		.titlePV:after {
+			content: '\2193';
+			position: absolute;
+			opacity: 0;
+			top: -0.075em;
+			right: 0;
+		}
+	   
+		/* Make space for arrow on mouse hover */
+		#logoPV:hover .titlePV {
+			padding-right: 0.75em;
+		}
+	   
+		/* Arrow animation on mouse hover */
+		#logoPV:hover .titlePV:after {
+			opacity: 1;
+			right: -0.3em;
+		}
+	   
+		/* Loop title animation */
+		.titleAnimPV {
+			display: inline-block;
+			width: 4.44em;
+			color: #FFF;
+			overflow: hidden;
+			font-size: 0.8333em;
+			animation: titleAnimPV 4s infinite;
+			animation-timing-function: ease-in-out;
+			animation-direction: alternate;
+		}
+	   
+		/* Title animation: all letters except main (P & C) grow in width
+		for expanding effect and change in font color for fading effect */
+		@keyframes titleAnimPV {
+			0% {width: 0em; color: #333;}
+			25% {width: 0em; color: #333;}
+			75% {width: 4.44em; color: #FFF;}
+			100% {width: 4.44em; color: #FFF;}
+		}
+	   
+		/* Main logo letters styling (P & C) */
+		.logoLetter {
+			color: #F33;
+			display: inline;
+			font-size: 1em;
+		}
+        </style>
+        <!-- End of CSS -->
+    </head>
+     
+    <body>
+        <!-- Logo HTML Div -->
+        <div id="logoPV">
+            <span class ="titlePV">
+                <span class="logoLetter">P</span><div class="titleAnimPV">roject</div><span class="logoLetter">C</span><div class="titleAnimPV">entral</div>
+            </span>
+        </div>
+    </body>
+</html>
+		</xmp>
+		<script src="../../JS/script.js"></script>
+		<script src="../../../../../JS/archivebar.js"></script>
+	</body>
+</html>

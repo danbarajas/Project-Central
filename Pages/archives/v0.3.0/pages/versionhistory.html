@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--
+Project Central: versionhistory.html
+Description: List of all updates to the website including additions, updates, bug fixes, archives, and code previews.
+Daniel Barajas
+Last edit: 3/7/2024
+-->
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Pages/versionhistorystyles.css">
+		<title>Version History</title>
+	</head>
+	
+	<body id="top">
+          
+        <!-- Navigation Bar -->
+        <nav></nav>
+
+        <!-- Main Content -->
+	    <main>
+		    <h1>Version History</h1>
+               <p>Includes all changes done to pages of this website including additions, updates, bug fixes, archives, and <em>code previews</em>.</p>
+               <p>All <em>code previews</em> can provide an option to copy code. Go to <a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_basic" target="_blank">W3Schools HTML editor</a> to try it out.</p>
+               
+			<!-- V0.3.0 | MARCH 6 -->
+			<div class="collapsibleBar">V0.3.0 | MARCH 8, 2024 | PHP, SQL, AND ARCHIVE ADDITION</div>
+			<div class="collBarContent">
+				<h3>General Update</h3>
+				<p>It's been a while since I last updated this website. It's been a huge transition from high school to college and I often find myself busy with other projects or enjoying 
+					the city but I felt it was time to return to this vast project I adored so much. With newfound motivation, I spent hours this week learning more on PHP to finally get some 
+					knowledge on backend functionality for the website and to put my newly acquired SQL knowledge to good use. I hope to keep this motivation going for further updates. 
+					I'm excited to learn more and use my new skills in hopes of seeing this website on a live domain soon.</p>
+				<ul>
+					<li><strong>Website is now connected to a local PHP server and a SQL database</strong></li>
+					<ul>
+						<li>Database contains a list of all projects for better organization and ease of access. Currently there are three tables.</li>
+						<ul>
+							<li>The projects table contains information on each project added to the website including name, category, access type, version, date created/updated, etc.</li>
+							<li>The categories and access_types tables list all types of each respective table that are linked with the projects table through a foreign key. These will 
+								be used for the filter feature on the products page to keep track of all types of projects without having to manually add them to the filter dropdown.</li>
+							<li>More tables may be added to the future if needed. Some possible plans may be adding a table for each version on this page.</li>
+							<li>I plan to added more columns to the projects table for more in-depth details such as descriptions, links, or images.</li>
+						</ul>
+						<li>PHP will allow for easy access to this database and backend functionality for the website</li>
+						<ul>
+							<li>Home Page index.html has been converted to index.php</li>
+							<li>Featured sections on the Home Page will now contain projects directly from the database. SQL will select a featured project of my choice (from Project_ID), 
+								the newest project, and the newly updated project. The last two are automatically updated when projects are created/updated in the database through an SQL query.</li>
+							<li>As of now, this is all PHP manages. I have further plans to continue using PHP for other purposes, but my main goal was to get my local server 
+								running and access the database.</li>
+						</ul>
+					</ul>
+					<li><strong>Introducing a website archive feature here on the Version History page</strong></li>
+					<ul>
+						<li>From now on, for each update will include a snapshot of the website that can be previewed</li>
+						<li>Note that you will not be able to open an archive while already viewing an archive to save on space and avoid confusion</li>
+						<li>Also note that I will not be keeping archives of the database, so outdated versions that use the database may still display up-to-date project details</li>
+						<li>The idea of these archive previews will be to see the website as it was at the given version to see how the website has changed over time</li>
+						<li>Links to archive previews will be added to the bottom of each version description from now on</li>
+						<li>Also added a couple other older versions of the website to the bottom of this version update</li>
+						<li>The feature works great but some concerns I may have in the future is the file size of the website considering I'm essentially carrying multiple copies of the website. 
+							Right now, the website is less than 500 KB so it shouldn't be a problem for a while but it's something to keep in mind for the future.</li>
+					</ul>
+				</ul>
+
+				<div class="tooltip">
+					<div class="archiveBtn">Archive v0.3.0</div>
+					<span class="tooltiptext">Disabled in archives</span>
+				</div>
+
+				<div class="tooltip">
+					<div class="archiveBtn">Archive v0.0.2 | October 2021</div>
+					<span class="tooltiptext">Disabled in archives</span>
+				</div>
+
+				<div class="tooltip">
+					<div class="archiveBtn">Archive v0.0.1 | March 2020</div>
+					<span class="tooltiptext">Disabled in archives</span>
+				</div>
+			</div>
+
+            <!-- V0.2.2 | DECEMBER 10 -->
+			<div class="collapsibleBar">V0.2.2 | DECEMBER 14, 2021 | JAVASCRIPT OPTIMIZATION</div>
+			<div class="collBarContent">
+				<h3>General Update</h3>
+				<ul>
+                    <li><strong>Further optimized coding format of the website using JavaScript</strong></li>
+                    <ul>
+                        <li>Seperated main script into sections using comments for easy developer access</li>
+                        <li>Added the <em>Constant Website Variables</em> section in the main script</li>
+                        <ul>
+                            <li><em>rootDirec</em> - Defines the current root directory of the website files. When the website files are moved to a different directory,
+                              simply change this variable to update all universal links and images that use the root directory.</li>
+                            <li><em>version</em> - Defines the current version of the website. Simply change this varible to update the current version to the correct
+                              number to display in elements such as the footer.</li>
+                            <li><em>siteName</em> - Defines the current site name (Project Central as of now). Changing this variable will update all instances (except
+                              the logo). This is in case I decide to change the name later.</li>
+                        </ul>
+                        <li>Multiple elements such as the navigation bar, footer, and favicon are now coded in JavaScript to be more adaptive</li>
+						<ul>
+							<li>Now any updates to the nav bar, footer, or favicon can be displayed to all linked pages.</li>
+							<ul>
+								<li>The favicon image and links in the nav bar and footer are now pathed from the root of the folder. As of now, this means it starts
+								  from the flash drive at <em>/media/removable/USB Drive/</em> on Chromebook. If the directory of the website changes, simply change the
+								  <em>rootDIrec</em> varible and the website will be functional again.</li>
+								<li>The nav bar is now adaptive to each page. If the page you are currently viewing is on the nav bar, it will be highlighted.</li>
+								<li>The browser tab title is now adaptive to the website name. The <em>siteName</em> variable will be added to the end of an browser
+								  tab title (the <em>&lt;title&gt;</em> tag in HTML).</li>
+							</ul>
+                        </ul>
+                        <li>Version history is now also adaptive and the most recent version will open automatically on page load instead of having to manually assign the <em>recent</em> ID.</li>
+                    </ul>
+				</ul>
+            </div>
+               
+			<!-- V0.2.1 | DECEMBER 1 -->
+			<div class="collapsibleBar">V0.2.1 | DECEMBER 1, 2021 | PROJECT CAROUSEL</div>
+			<div class="collBarContent">
+				<h3>Home Page | index.html</h3>
+				<ul>
+				     <li><strong>Added "More Projects" carousel near bottom</strong></li>
+				     <ul>
+				          <li>Carousel function only uses HTML and CSS</li>
+				          <li>Carousel shuffle is determined by JavaScript</li>
+				          <li>Carousel arrows scroll left and right</li>
+				               <ul>
+				                    <li>Scrolls through up to 9 projects</li>
+				               </ul>
+			               <li>Projects on the carousel are randomized from all projects on page load</li>
+				          <li>New projects must be added to the carousel list of projects in index.html</li>
+				     </ul>
+				</ul>
+               </div>
+			
+			<!-- V0.2.0 | NOVEMBER 16 -->
+			<div class="collapsibleBar">V0.2.0 | NOVEMBER 16, 2021 | VERSION HISTORY</div>
+			<div class="collBarContent">
+				<h3>Version History Page | versionhistory.html</h3>
+				<ul>
+				     <li><strong>Completed Version History page</strong></li>
+				          <ul>
+				               <li>Added a universal collapsible bar; can be adapted for any content along with collapsible items (no bar).</li>
+				               <ul>
+				                    <li>Collapsible bars marked with the "recent" ID will load already opened (for most recent version).</li>
+				               </ul>
+				               <li>Version number, as of now, is in V<em>X</em>.<em>Y</em>.<em>Z</em> format.</li>
+				               <ul>
+				                    <li><em>X</em> refers to the version of the overall website. Will remain at 0 until the website is completed and usable.</li>
+				                    <li><em>Y</em> refers to the number of significant updates to the website. This is mostly used for when new pages are added.</li>
+				                    <li><em>Z</em> refers to any other small updates added to the website such as debugging or slight modifications.</li>
+				                    <li><u>Note:</u> If a version number changes, all less important numbers reset back to 0. For example, if the version is V1.2.3 and a new page is added, the new version would be V1.3.0.</li>
+				               </ul>
+				               <li>New versions will be added with title format: <em>VX.Y.Z</em> | <em>Full date</em> | <em>Feature title</em></li>
+				               <li>Added code preview feature</li>
+				               <ul>
+				                    <li>Code previews can be added to any version update summary</li>
+				                    <li>Primarily used to reference older code or to export desired code</li>
+				                    <li>Opens prepared code in a new tab</li>
+				                    <li>Fully functional and includes a copy button plus a link to a code editor</li>
+				                    <li>Code previews will not be added to version update summaries unless they are added at a later date than its respected version</li>
+				               </ul>
+				               <li><strong>Page is now fully functional for any upcoming version updates.</strong></li>
+				          </ul>
+				</ul>
+               </div>
+			
+			<!-- V0.1.0 | OCTOBER 28 -->
+		    <div class="collapsibleBar">V0.1.0 | OCTOBER 28, 2021 | HOME</div>
+		    <div class="collBarContent">
+				<h3>Home Page | index.html</h3>
+				<ul>
+     				<li><strong>Completed basic page functionality</strong></li>
+     					<ul>
+     						<li>Added front parallax with intro box</li>
+     						<li>Completed logo expand animation (plays on page load)</li>
+     							<div class="tooltip">
+     								<a href="previews/logoPV.html" target="_blank"><div id="logoPV"><span class ="titlePV"><span class="logoLetter">P</span><div class="titleAnimPV">roject</div><span class="logoLetter">C</span><div class="titleAnimPV">entral</div></span></div></a>
+     								<span class="tooltiptext">Open in new tab</span>
+     							</div>
+     						<li>Completed navigation bar and fullscreen expanded menu</li>
+     						<li>Added panel template for featured projects</li>
+     						<li>Added custom scrollbar that can be adapted for an element</li>
+     						<li>Added footer at the bottom of almost all pages</li>
+     							<ul>
+     								<li>Includes Back to Top button (smoothly scrolls to top)</li>
+     								<li>Added columns for additional links</li>
+     								<li>Added version info to copyright (update on every page using main script file)</li>
+     							</ul>
+     					</ul>
+				</ul>
+		    </div>
+	    </main>
+	
+	    <!-- Footer -->
+	    <footer></footer>
+		
+		<script src="../JS/script.js"></script>
+		<script src="../../../../JS/archivebar.js"></script>
+	</body>
+</html>

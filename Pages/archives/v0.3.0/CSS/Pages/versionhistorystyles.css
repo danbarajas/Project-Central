@@ -1,0 +1,98 @@
+/*
+Project Central: versionhistorystyles.css
+Daniel Barajas
+Last edit: 3/6/2024
+*/
+
+main {
+	padding: 4em 7.5em;
+	color: #555;
+}
+
+h1 {
+    color: #333;
+}
+
+#logoPV {
+	padding: 0.333em 0.5em;
+	margin: 0;
+	display: inline-block;
+	position: relative;
+	color: #FFF;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	font-family: 'Major Mono Display', monospace;
+	transition: 0.3s;
+	background-color: rgba(85,85,85,.3);
+}
+
+#logoPV:hover {
+    background-color: rgba(17,17,17,.5);
+}
+
+#logoPV:active {
+    transition: 0.1s;
+    background-color: rgba(0,0,0,.7);
+}
+
+.titlePV {
+	transition: 0.3s;
+	position: relative;
+	display: inline-block;
+}
+
+.titlePV:after {
+	content: '\2193';
+	position: absolute;
+	opacity: 0;
+	top: -0.075em;
+	right: 0;
+}
+
+#logoPV:hover .titlePV {
+	padding-right: 0.75em;
+}
+
+#logoPV:hover .titlePV:after {
+	opacity: 1;
+	right: -0.3em;
+}
+
+.titleAnimPV {
+    display: inline-block;
+    width: 4.44em;
+    color: #FFF;
+    overflow: hidden;
+    font-size: 0.8333em;
+    animation: titleAnimPV 4s infinite;
+    animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+}
+
+@keyframes titleAnimPV {
+    0% {width: 0em; color: #333;}
+    25% {width: 0em; color: #333;}
+    75% {width: 4.44em; color: #FFF;}
+    100% {width: 4.44em; color: #FFF;}
+}
+
+.archiveBtn {
+	display: inline-block;
+	padding: 0.5em 1em;
+	margin: 0.5em 0;
+	color: #FFF;
+	background-color: #555;
+	border: none;
+	border-radius: 0.25em;
+	font-size: 1em;
+	transition: 0.3s;
+	margin-bottom: 1em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	text-transform: uppercase;
+}
+
+.archiveBtn:hover {
+	background-color: #F33;
+}

@@ -1,0 +1,559 @@
+/*
+Project Central: indexstyles.css
+Daniel Barajas
+Last edit: 10/28/2021
+Version: 0.1.0
+*/
+
+/* Intro Screen Styles*/
+.parallax {
+    background-image: url(../../../images/code.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#intro {
+	position: relative;
+	width: 55%;
+	height: 51%;
+	padding: 2% 3%;
+	margin: auto;
+	top: 20%;
+	background-color: rgba(250,250,250,.6);
+	border-radius: 15px;
+	font-size: 3em;
+	color: #000;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/* Content styles */
+main {
+	padding: 4em 15em;
+}
+
+.panel {
+	margin: 6.25em auto;
+	width: 100%;
+	height: 35vw;
+	background-color: #FFF;
+	border-radius: 7px;
+	box-sizing: initial;
+}
+
+.leftDesc {
+	height: calc(100% - 4px);
+	width: 45%;
+	background-color: #FFF;
+	border: 2px solid #CCC;
+	border-radius: 7px;
+	float: left;
+}
+
+.rightDesc {
+	height: calc(100% - 4px);
+	width: 45%;
+	background-color: #FFF;
+	border: 2px solid #CCC;
+	border-radius: 7px;
+	float: right;
+}
+
+.descContent {
+	padding: 1% 8%;
+	height: 27.3vw;
+	width: 84%;
+	border: 1px solid #CCC;
+	border-radius: 7px 7px 0 0;
+	overflow: scroll;
+	background-color: transparent;
+}
+
+.descButton {
+	width: 36.5%;
+	text-align: center;
+	margin: auto;
+	display: block;
+	position: relative;
+	top: 1.15vw;
+	font-size: 1.25vw;
+	font-weight: bold;
+}
+
+.descButton a {
+	display: block;
+	color: #FFF;
+	padding: 1.25vw 0;
+	transition: 0.3s, height 0s, width 0s, font-size 0s, padding 0s;
+	border: 3px solid #4A4;
+	border-radius: 20px;
+	background-color: #4A4;
+}
+
+.descButton a span {
+	transition: 0.3s, height 0s, width 0s, font-size 0s;
+	position: relative;
+	display: inline-block;
+}
+
+.descButton:hover {
+	background-color: transparent;
+}
+
+.descButton a:hover {
+	color: #4A4;
+	background-color: transparent;
+}
+
+.descButton a span:after {
+  content: '\279C';
+  position: absolute;
+  opacity: 0;
+  top: -0.1em;
+  right: 0;
+}
+
+.descButton a:hover span {
+  padding-right: 1em;
+}
+
+.descButton a:hover span:after {
+  opacity: 1;
+  right: -0.3em;
+}
+
+/* Media Queries for Screen Size Variations */
+@media screen and (max-width: 1250px), print {
+     
+	main {
+		padding: 2em 7.5em;
+	}
+	
+	.descButton {
+		font-size: 1.25vw;
+		top: 1.3vw;
+	}
+	
+	.descButton a {
+		padding: 1vw;
+	}
+}
+@media screen and (max-width: 900px), print {
+     
+	.descButton {
+		top: 1.7vw;
+		font-size: 1.5vw;
+	}
+	
+	main {
+		padding: 2em 0;
+	}
+	
+	.panel {
+		height: 43.75vw;
+		border-radius: 0;
+	}
+	
+	.descContent {
+		height: 34.125vw;
+	}
+	
+	.leftDesc {
+		border-radius: 0 7px 7px 0;
+	}
+	
+	.rightDesc {
+		border-radius: 7px 0 0 7px;
+	}
+}
+
+@media screen and (max-width: 650px), print {
+	
+	.descButton {
+		font-size: 2.2vw;
+		top: 2vw;
+	}
+	
+	.panel {
+		height: 52.5vw;
+	}
+	
+	.descContent {
+		height: 40.95vw;
+	}
+	
+}
+
+@media screen and (max-width: 400px), print {
+     .descButton {
+          width: 100%;
+          height: 100%;
+          top: 0;
+     }
+     
+     .descButton a {
+          border: 0;
+          outline: 1px solid #4A4;
+          border-radius: 0;
+		  padding: 5% 0;
+     }
+}
+
+/* Multi-item Carousel */
+html {
+     box-sizing: border-box;
+}
+     
+*, *:before, *:after {
+     box-sizing: inherit;
+}
+     
+.carousel {
+     min-width: 900px;
+     max-width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 48px;
+     padding-right: 48px;
+     position: relative;
+}
+     
+.carousel__activator {
+     display: none;
+}
+     
+.carousel__controls {
+     display: none;
+     align-items: center;
+     justify-content: space-between;
+     position: absolute;
+     top: 0;
+     right: 16px;
+     left: 16px;
+     bottom: 0;
+}
+
+.carousel__controls:first-of-type {
+     justify-content: flex-end;
+}
+
+.carousel__controls:last-of-type {
+     justify-content: flex-start;
+}
+     
+.carousel__control {
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     background-color: #fff;
+     color: #3d414a;
+     border-radius: 100%;
+     box-shadow: 0 2px 10px 0 rgba(33, 34, 36, 0.3);
+     font-size: 24px;
+     height: 48px;
+     justify-content: center;
+     transition: 0.3s all;
+     width: 48px;
+     z-index: 1;
+	 user-select: none;
+}
+
+.carousel__control:hover {
+     -webkit-transform: scale(1.05);
+     transform: scale(1.05);
+}
+     
+.carousel__activator:nth-of-type(1):checked
+~ .carousel__controls:nth-of-type(1) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(1):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(0%);
+     transform: translateX(0%);
+}
+     
+.carousel__activator:nth-of-type(2):checked
+~ .carousel__controls:nth-of-type(2) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(2):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-100%);
+     transform: translateX(-100%);
+}
+     
+.carousel__activator:nth-of-type(3):checked
+~ .carousel__controls:nth-of-type(3) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(3):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-200%);
+     transform: translateX(-200%);
+}
+     
+.carousel__activator:nth-of-type(4):checked
+~ .carousel__controls:nth-of-type(4) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(4):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-300%);
+     transform: translateX(-300%);
+}
+     
+.carousel__activator:nth-of-type(5):checked
+~ .carousel__controls:nth-of-type(5) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(5):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-400%);
+     transform: translateX(-400%);
+}
+     
+.carousel__activator:nth-of-type(6):checked
+~ .carousel__controls:nth-of-type(6) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(6):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-500%);
+     transform: translateX(-500%);
+}
+     
+.carousel__activator:nth-of-type(7):checked
+~ .carousel__controls:nth-of-type(7) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(7):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-600%);
+     transform: translateX(-600%);
+}
+     
+.carousel__activator:nth-of-type(8):checked
+~ .carousel__controls:nth-of-type(8) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(8):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-700%);
+     transform: translateX(-700%);
+}
+     
+.carousel__activator:nth-of-type(9):checked
+~ .carousel__controls:nth-of-type(9) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(9):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-800%);
+     transform: translateX(-800%);
+}
+     
+.carousel__activator:nth-of-type(10):checked
+~ .carousel__controls:nth-of-type(10) {
+     display: flex;
+}
+     
+.carousel__activator:nth-of-type(10):checked
+~ .carousel__screen
+.carousel__track {
+     -webkit-transform: translateX(-900%);
+     transform: translateX(-900%);
+}
+     
+.carousel__screen {
+     overflow: hidden;
+     margin-left: -16px;
+     margin-right: -16px;
+}
+     
+.carousel__track {
+     font-size: 0;
+     transition: all 0.3s ease 0s;
+     white-space: nowrap;
+     -webkit-overflow-scrolling: touch;
+}
+     
+.carousel__item {
+     display: none;
+     padding-left: 16px;
+     padding-right: 16px;
+     vertical-align: top;
+     white-space: normal;
+}
+     
+.carousel__item--desktop-in-1 {
+     width: 100%;
+}
+     
+.carousel__item--desktop-in-2 {
+     width: 50%;
+}
+     
+.carousel__item--desktop-in-3 {
+     width: 33.3333333333%;
+}
+     
+.carousel__item--desktop-in-4 {
+     width: 25%;
+}
+     
+.carousel__item--desktop-in-5 {
+     width: 20%;
+}
+     
+     
+     
+.caroContent {
+     color: #000;
+     display: flex;
+     font-family: Helvetica;
+     font-weight: 100;
+     align-items: center;
+     justify-content: center;
+     border-radius: 3px;
+     height: 250px;
+     width: 100%;
+     font-size: 20px;
+     background-color: #FFF;
+     border: 2px solid #CCC;
+     border-radius: 7px;
+	 position: relative;
+}
+     
+/*.carousel__item .caroContent {
+     background-color: #FFF;
+}
+     
+.carousel__item:nth-child(2) .caroContent {
+     background-color: #3692b6;
+}
+     
+.carousel__item:nth-child(3) .caroContent {
+     background-color: #6fccc9;
+}
+     
+.carousel__item:nth-child(4) .caroContent {
+     background-color: #a6e3cf;
+}
+     
+.carousel__item:nth-child(5) .caroContent {
+     background-color: #aff0be;
+}
+     
+.carousel__item:nth-child(6) .caroContent {
+     background-color: #527059;
+}
+     
+.carousel__item:nth-child(7) .caroContent {
+     background-color: #243127;
+}*/
+     
+@media screen and (max-width: 1023px) {
+     .carousel {
+     padding-left: 0;
+     padding-right: 0;
+     }
+     
+     .carousel__activator:nth-of-type(n):checked ~ .carousel__controls:nth-of-type(n) {
+     display: none;
+     }
+     .carousel__activator:nth-of-type(n):checked ~ .carousel__screen .carousel__track {
+     -webkit-transform: none;
+     transform: none;
+     }
+     
+     .carousel__screen {
+     margin-left: 0;
+     margin-right: 0;
+     }
+     
+     .carousel__track {
+     overflow-x: auto;
+     width: auto;
+     padding-left: 48px;
+     padding-right: 48px;
+     }
+     
+     .carousel__item--tablet-in-1 {
+     width: 90%;
+     }
+     
+     .carousel__item--tablet-in-2 {
+     width: 45%;
+     }
+     
+     .carousel__item--tablet-in-3 {
+     width: 30%;
+     }
+}
+@media screen and (max-width: 650px) {
+     .carousel__track {
+     padding-left: 0;
+     padding-right: 0;
+     }
+     
+     .carousel__item--mobile-in-1 {
+     width: 90%;
+     }
+     
+     .carousel__item--mobile-in-2 {
+     width: 45%;
+     }
+     
+     .carousel__item--mobile-in-3 {
+     width: 30%;
+     }
+}
+
+/* Custom carousel item project display */
+.titleCover {
+     width: 100%;
+     padding: 7.5% 0;
+     background-color: rgba(51,51,51,.8);
+     color: #FFF;
+     text-align: center;
+     font-size: 1em;
+     text-transform: uppercase;
+	 position: absolute;
+	 user-select: none;
+}
+
+.projectCover {
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     transition: 0.4s;
+	 position: absolute;
+	 z-index: 1;
+	 border-radius: 7px;
+}
+
+.projectCover:hover {
+     background-color: rgba(0,0,0,.25);
+}
