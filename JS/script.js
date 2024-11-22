@@ -10,7 +10,7 @@
 // CONSTANT WEBSITE VARIBLES
   // ROOT DIRECTORY -- Used in all adaptable links and images; Match to the root directory file path
   // (for my personal use on different devices or if I move the folder location)
-const rootDirec = "/Project Central/";
+const rootDirec = "/";
 
   // VERSION NUMBER -- Current version of the website displayed in the footer
 const version = "0.3.0";

@@ -9,9 +9,11 @@
  */
 
 // Database information
-$dbConn = "mysql:host=localhost;dbname=project_list";
-$dbUsername = "root";
-$dbPassword = "";
+$dbURL = getenv('JAWSDB_URL');
+$dbParts = parse_url($dbURL);
+$dbConn = $dbParts['scheme'] . ":host=" . $dbParts['host'] . ":" . $dbParts['port'] . ";dbname=" . ltrim($dbParts['path'], '/');
+$dbUsername = $dbParts['user'];
+$dbPassword = $dbParts['pass'];
 
 try {
     $pdo = new PDO($dbConn, $dbUsername, $dbPassword); // PDO Connection

@@ -43,7 +43,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../CSS/stylesheet.css">
-		<link rel="stylesheet" type="text/css" href="../CSS/Pages/projectsstyles.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/pages/projectsstyles.css">
         <title>Projects</title>
     </head>
     <body id="top">
@@ -122,6 +122,6 @@
         
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script src="../JS/script.js"></script>
-        <script src="../JS/Pages/projectsscript.js"></script>
+        <script src="../JS/pages/projectsscript.js"></script>
     </body>
 </html>
