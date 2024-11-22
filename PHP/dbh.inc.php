@@ -11,10 +11,12 @@
 // Database information
 $dbURL = getenv('JAWSDB_URL');
 $dbParts = parse_url($dbURL);
-var_dump($dbParts);
+$dbConn = $dbParts['scheme'] . ":host=" . $dbParts['host'] . ":" . $dbParts['port'] . ";dbname=" . ltrim($dbParts['path'], '/');
+$dbUsername = $dbParts['user'];
+$dbPassword = $dbParts['pass'];
 
 try {
-    $pdo = new PDO($dbParts['host'] + ":" + $dbParts['port'], $dbParts['user'], $dbParts['pass']); // PDO Connection
+    $pdo = new PDO($dbConn, $dbUsername, $dbPassword); // PDO Connection
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Set to give an exception when an error occurs
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
