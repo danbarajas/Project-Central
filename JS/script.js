@@ -58,6 +58,8 @@ if (footer) {
                <ul>
                     <li><h2>Other Links</h2></li>
                     <li><a href="${rootDirec}pages/versionhistory.html">Version History</a></li>
+					<li><a href="https://github.com/danbarajas/Project-Central">GitHub Repository</a></li>
+					<li><a href="https://www.linkedin.com/in/danbarajas/">LinkedIn</a></li>
                </ul>
           </div>
      
