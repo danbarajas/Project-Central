@@ -55,7 +55,7 @@
           <!-- Intro Screen -->
 		<a href="#main">
                <div class="parallax">
-                    <div id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+                    <div id="intro">Soon to be a full collection of all my projects and hobbies, in and out of computer science. Also showcases many of my abilities in web design. Currently has multiple pages such as a home page, projects page, and a version history page. The Home page will show featured, new, and random projects. The Projects page is a full list of all projects and their details. Soon, each project will have its own page with a more in-depth description. The Version History page has an archive of all updates made to the Project Central website with some including an archived preview of what the website used to look like.</div>
                </div>
 		</a>
 		
